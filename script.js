@@ -30,3 +30,24 @@ function modalOpen() {
   var element = document.getElementById("modal-wrapper");
   element.classList.add("open");
 }
+
+function contactForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var message = document.getElementById("message").value;
+
+  if (name == "" || email == "" || phone == "" || message == "") {
+    alert("Please fill all the fields");
+  } else {
+    var contactData = JSON.stringify({
+      name: name,
+      email: email,
+      phone: phone,
+      message: message,
+    });
+    console.log(contactData);
+  }
+
+  console.log("contact form");
+}
